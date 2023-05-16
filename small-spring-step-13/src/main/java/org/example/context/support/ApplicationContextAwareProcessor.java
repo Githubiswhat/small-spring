@@ -1,0 +1,26 @@
+package org.example.context.support;
+
+import org.example.beans.factory.config.BeanPostProcessor;
+import org.example.context.ApplicationContext;
+import org.example.context.ApplicationContextAware;
+
+public class ApplicationContextAwareProcessor implements BeanPostProcessor {
+
+    private ApplicationContext applicationContext;
+
+    public ApplicationContextAwareProcessor(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
+
+    @Override
+    public Object postProcessBeanBeforeInitialization(Object bean, String beanName) {
+        if (bean instanceof ApplicationContextAware){
+            ((ApplicationContextAware) bean).setApplicationContext(applicationContext);
+        }
+    }
+
+    @Override
+    public Object postProcessBeanAfterInitialization(Object bean, String beanName) {
+        return bean;
+    }
+}
