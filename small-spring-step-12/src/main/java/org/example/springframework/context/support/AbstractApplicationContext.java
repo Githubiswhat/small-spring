@@ -3,7 +3,6 @@ package org.example.springframework.context.support;
 import org.example.springframework.beans.factory.ConfigurableListableBeanFactory;
 import org.example.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.example.springframework.beans.factory.config.BeanPostProcessor;
-import org.example.springframework.context.ApplicationContextAware;
 import org.example.springframework.context.ApplicationListener;
 import org.example.springframework.context.ConfigurableApplicationContext;
 import org.example.springframework.context.event.ApplicationEventMultiCaster;

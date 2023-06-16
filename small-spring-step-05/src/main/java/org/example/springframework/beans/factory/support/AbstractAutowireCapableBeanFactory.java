@@ -53,4 +53,8 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     public void setInstantiation(Instantiation instantiation) {
         this.instantiation = instantiation;
     }
+
+    public static class SimpleInstantiationStrategy implements InstantiationStrategy {
+
+    }
 }
